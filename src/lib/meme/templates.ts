@@ -5,77 +5,80 @@ export type MemeTemplate = {
   kind: "photo" | "blank";
 };
 
+const asset = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: "table-cat",
     name: "Кот за столом",
-    src: "/templates/table-cat.jpg",
+    src: asset("templates/table-cat.jpg"),
     kind: "photo",
   },
   {
     id: "cool-dog",
     name: "Крутой пёс",
-    src: "/templates/cool-dog.jpg",
+    src: asset("templates/cool-dog.jpg"),
     kind: "photo",
   },
   {
     id: "this-is-fine",
     name: "Всё нормально",
-    src: "/templates/this-is-fine.jpg",
+    src: asset("templates/this-is-fine.jpg"),
     kind: "photo",
   },
   {
     id: "victory",
     name: "Успех",
-    src: "/templates/victory.jpg",
+    src: asset("templates/victory.jpg"),
     kind: "photo",
   },
   {
     id: "two-buttons",
     name: "Две кнопки",
-    src: "/templates/two-buttons.jpg",
+    src: asset("templates/two-buttons.jpg"),
     kind: "photo",
   },
   {
     id: "confused",
     name: "Непонятно",
-    src: "/templates/confused.jpg",
+    src: asset("templates/confused.jpg"),
     kind: "photo",
   },
   {
     id: "shock",
     name: "Шок",
-    src: "/templates/shock.jpg",
+    src: asset("templates/shock.jpg"),
     kind: "photo",
   },
   {
     id: "whiteboard",
     name: "Презентация",
-    src: "/templates/whiteboard.jpg",
+    src: asset("templates/whiteboard.jpg"),
     kind: "photo",
   },
   {
     id: "nope-yes",
     name: "Отказ",
-    src: "/templates/nope-yes.jpg",
+    src: asset("templates/nope-yes.jpg"),
     kind: "photo",
   },
   {
     id: "split",
     name: "Две панели",
-    src: "/templates/split.svg",
+    src: asset("templates/split.svg"),
     kind: "blank",
   },
   {
     id: "ink",
     name: "Чернила",
-    src: "/templates/ink.svg",
+    src: asset("templates/ink.svg"),
     kind: "blank",
   },
   {
     id: "paper",
     name: "Бумага",
-    src: "/templates/paper.svg",
+    src: asset("templates/paper.svg"),
     kind: "blank",
   },
 ];
